@@ -14,6 +14,7 @@ export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [cookie, setCookie, removeCookie] = useCookies(["access_token"]);
 
   async function login() {
@@ -31,6 +32,7 @@ export const AuthProvider = ({ children }) => {
     }
   }
 
+  
   function logout() {
     removeCookie("access_token");
   }

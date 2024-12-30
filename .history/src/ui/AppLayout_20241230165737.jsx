@@ -8,7 +8,7 @@ function AppLayout() {
   return (
     <>
       <nav className="w-full h-20 flex justify-between px-7 items-center">
-        <h1>Welcome, {user?.displayName}</h1>
+        <h1>Welcome, {user?.nameDisplay}</h1>
         <LogoutBtn />
       </nav>
       <main className="w-full h-screen p-7 overflow-auto bg-gradient-to-r from-slate-700 to-sky-900">

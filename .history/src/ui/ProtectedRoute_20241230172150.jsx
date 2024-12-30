@@ -16,7 +16,6 @@ function ProtectedRoute({ children }) {
     [isAuthenticated, navigate]
   );
 
-  useEffect(() => console.log(isAuthenticated), [isAuthenticated]);
   if (isAuthenticated) return children;
 
   return (

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Spinner from "./Spinner";
-import { useCookiesAccess } from "../context/CookiesAccessProvider";
+import { useCookiesAccess } from "../context/cookiesAccessProvider";
 
 function ProtectedRoute({ children }) {
   const navigate = useNavigate();
@@ -16,7 +16,6 @@ function ProtectedRoute({ children }) {
     [isAuthenticated, navigate]
   );
 
-  useEffect(() => console.log(isAuthenticated), [isAuthenticated]);
   if (isAuthenticated) return children;
 
   return (

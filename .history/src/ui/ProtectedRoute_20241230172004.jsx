@@ -2,11 +2,12 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Spinner from "./Spinner";
-import { useCookiesAccess } from "../context/CookiesAccessProvider";
+import { useAuth } from "../context/AuthContext";
+import { useCookies } from "react-cookie";
 
 function ProtectedRoute({ children }) {
   const navigate = useNavigate();
-  const { getCookie } = useCookiesAccess();
+  const { getCookie } = useCookies();
   const isAuthenticated = getCookie("access_token");
 
   useEffect(
@@ -16,7 +17,6 @@ function ProtectedRoute({ children }) {
     [isAuthenticated, navigate]
   );
 
-  useEffect(() => console.log(isAuthenticated), [isAuthenticated]);
   if (isAuthenticated) return children;
 
   return (

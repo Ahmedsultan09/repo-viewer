@@ -7,9 +7,9 @@ import { CookiesAccessProvider } from "./context/CookiesAccessProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <AuthProvider>
-    <CookiesAccessProvider>
+  <CookiesAccessProvider>
+    <AuthProvider>
       <App />
-    </CookiesAccessProvider>
-  </AuthProvider>
+    </AuthProvider>
+  </CookiesAccessProvider>
 );

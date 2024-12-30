@@ -4,11 +4,14 @@ import { useNavigate } from "react-router-dom";
 
 function LoginBtn() {
   const { login } = useAuth();
-  const navigate = useNavigate("/");
+  const navigate = useNavigate();
   return (
     <button
       className="text-red-500"
-      onClick={() => login().then(() => navigate("/"))}
+      onClick={() => {
+        login();
+        navigate("/");
+      }}
     >
       Login
     </button>
