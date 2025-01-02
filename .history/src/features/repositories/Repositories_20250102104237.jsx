@@ -3,7 +3,7 @@ import RepoItem from "./RepoItem";
 import Spinner from "../../ui/Spinner";
 
 const Repositories = () => {
-  const [repos] = useGetRepos();
+  const [repos, isLoading] = useGetRepos();
 
   return (
     <section className="border p-4 mb-4 rounded">
