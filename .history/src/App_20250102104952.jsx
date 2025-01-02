@@ -7,6 +7,7 @@ import ProtectedRoute from "./ui/ProtectedRoute";
 import AppLayout from "./ui/AppLayout";
 import { CookiesAccessProvider } from "./context/CookiesAccessProvider";
 import RepoItemPage from "./pages/RepoItemPage";
+require("dotenv").config();
 function App() {
   return (
     <>

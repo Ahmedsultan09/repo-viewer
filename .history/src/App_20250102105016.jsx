@@ -8,6 +8,8 @@ import AppLayout from "./ui/AppLayout";
 import { CookiesAccessProvider } from "./context/CookiesAccessProvider";
 import RepoItemPage from "./pages/RepoItemPage";
 function App() {
+  require("dotenv").config();
+
   return (
     <>
       <CookiesAccessProvider>
